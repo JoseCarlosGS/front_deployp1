@@ -474,7 +474,7 @@ const GrapesEditor = () => {
             <StudioEditor
                 options={{
                     // ...
-                    licenseKey: 'TU_CLAVE_DE_LICENCIA', 
+                    licenseKey: '1e00b3c12c6940bca6da41180c023bd570a3218da91d414dade556165604172c', 
                     project: {
                         type: 'web',
                         default: {
