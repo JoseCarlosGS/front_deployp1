@@ -10,7 +10,6 @@ const GrapesEditor = () => {
     const socket = useWebSocketContext();
     const isApplyingRemoteUpdate = useRef(false);
     const { editor } = useAppContext();
-    const pendingUpdates = useRef<{[id: string]: ReturnType<typeof setTimeout>}>({});
     const lastOperationId = useRef<string | null>(null);
     const currentPageIndex = useRef<number>(0);
     const initialSyncDone = useRef<boolean>(false);

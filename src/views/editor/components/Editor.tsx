@@ -6,16 +6,13 @@ import Navbar from '../../components/Navbar';
 import { useAppContext} from '../../../contexts/AppContext';
 import ChatPanel from './ChatPanel';
 import GrapesEditor from './../components/GrapesEditor';
-import { useLocation } from 'react-router-dom';
 import { ProjectServices } from '../../../services/ProjectServices';
 
 const Editor: React.FC = () => {
   const {currentProject} = useAppContext()
   const editorRef = useRef<HTMLDivElement | null>(null);
   const { editor } = useAppContext();
-  const location = useLocation();
   const [projectId, setProjectId] = useState<number | null>(null)
-  const queryParams = new URLSearchParams(location.search);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   //const socket = useRef(io('http://localhost:3000')); // Conexión a Socket.IO
